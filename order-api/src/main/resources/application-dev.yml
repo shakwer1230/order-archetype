@@ -1,0 +1,3 @@
+dbconfig:
+  file:
+    location:  C:\opt\data\fang-order-api\config-cache
