@@ -19,6 +19,6 @@ public class HelloController {
     @GetMapping("/hello")
     @ResponseBody
     public String welcome(){
-        return "Welcome to Spring boot";
+        return "Welcome to Spring boot hh";
     }
 }

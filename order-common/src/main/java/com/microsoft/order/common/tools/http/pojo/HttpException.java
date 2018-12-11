@@ -6,8 +6,8 @@ package com.microsoft.order.common.tools.http.pojo;
  * Create By 2017-07-20 15:57
  */
 public class HttpException extends Exception {
-    private com.fang.order.common.tools.http.pojo.HttpSend httpSend;
-    private com.fang.order.common.tools.http.pojo.HttpReceive httpReceive;
+    private HttpSend httpSend;
+    private HttpReceive httpReceive;
 
     public HttpException(String msg) {
         super(msg);
@@ -21,7 +21,7 @@ public class HttpException extends Exception {
         super(msg, e);
     }
 
-    public HttpException(String msg, com.fang.order.common.tools.http.pojo.HttpSend httpSend, com.fang.order.common.tools.http.pojo.HttpReceive httpReceive) {
+    public HttpException(String msg, HttpSend httpSend, HttpReceive httpReceive) {
         super(msg);
         this.httpSend = httpSend;
         this.httpReceive = httpReceive;

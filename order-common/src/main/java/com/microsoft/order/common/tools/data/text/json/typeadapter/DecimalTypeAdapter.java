@@ -2,7 +2,7 @@ package com.microsoft.order.common.tools.data.text.json.typeadapter;
 
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.fang.order.common.tools.data.decimal.Decimal;
+import com.microsoft.order.common.tools.data.decimal.Decimal;
 
 import java.io.IOException;
 

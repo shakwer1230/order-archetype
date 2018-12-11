@@ -1,9 +1,10 @@
 package com.microsoft.order.common.tools.file;
 
 import com.google.common.collect.Lists;
-import com.fang.order.common.tools.constant.StrConst;
-import com.fang.order.common.tools.data.text.ToolConvert;
-import com.fang.order.common.tools.data.text.ToolStr;
+import com.microsoft.order.common.tools.constant.StrConst;
+import com.microsoft.order.common.tools.data.text.ToolConvert;
+import com.microsoft.order.common.tools.data.text.ToolStr;
+
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

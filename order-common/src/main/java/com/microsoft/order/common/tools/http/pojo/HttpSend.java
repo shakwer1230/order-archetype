@@ -1,6 +1,7 @@
 package com.microsoft.order.common.tools.http.pojo;
 
-import com.fang.order.common.tools.constant.StrConst;
+
+import com.microsoft.order.common.tools.constant.StrConst;
 
 import java.nio.charset.Charset;
 import java.util.Map;

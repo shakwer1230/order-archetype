@@ -2,8 +2,8 @@ package com.microsoft.order.common.tools.data.text.json.typeadapter;
 
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.fang.order.common.tools.time.DatePlus;
-import com.fang.order.common.tools.time.ToolDatePlus;
+import com.microsoft.order.common.tools.time.DatePlus;
+import com.microsoft.order.common.tools.time.ToolDatePlus;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;

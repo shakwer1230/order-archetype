@@ -3,13 +3,14 @@ package com.microsoft.order.common.config.kafka;
 import ch.qos.logback.core.UnsynchronizedAppenderBase;
 import ch.qos.logback.core.encoder.Encoder;
 import ch.qos.logback.core.spi.AppenderAttachable;
-import com.fang.order.common.config.kafka.delivery.*;
-import com.fang.order.common.config.kafka.keying.*;
+import com.microsoft.order.common.config.kafka.delivery.AsynchronousDeliveryStrategy;
+import com.microsoft.order.common.config.kafka.delivery.DeliveryStrategy;
+import com.microsoft.order.common.config.kafka.keying.KeyingStrategy;
+import com.microsoft.order.common.config.kafka.keying.NoKeyKeyingStrategy;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.apache.kafka.clients.producer.ProducerConfig.*;
 import static org.apache.kafka.clients.producer.ProducerConfig.BOOTSTRAP_SERVERS_CONFIG;
 
 /**

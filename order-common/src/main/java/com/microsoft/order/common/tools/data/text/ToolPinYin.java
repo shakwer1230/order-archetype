@@ -1,12 +1,12 @@
 package com.microsoft.order.common.tools.data.text;
 
+import com.microsoft.order.common.tools.constant.StrConst;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
-import com.fang.order.common.tools.constant.StrConst;
 
 /**
  * 汉子拼音转换类

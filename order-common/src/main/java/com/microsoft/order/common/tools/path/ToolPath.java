@@ -1,10 +1,11 @@
 package com.microsoft.order.common.tools.path;
 
-import com.fang.order.common.tools.constant.StrConst;
-import com.fang.order.common.tools.data.text.ToolStr;
-import com.fang.order.common.tools.file.FileType;
-import com.fang.order.common.tools.file.ToolFileType;
-import com.fang.order.common.tools.path.visit.RmrVisitor;
+
+import com.microsoft.order.common.tools.constant.StrConst;
+import com.microsoft.order.common.tools.data.text.ToolStr;
+import com.microsoft.order.common.tools.file.FileType;
+import com.microsoft.order.common.tools.file.ToolFileType;
+import com.microsoft.order.common.tools.path.visit.RmrVisitor;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

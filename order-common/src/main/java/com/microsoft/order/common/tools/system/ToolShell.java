@@ -1,7 +1,8 @@
 package com.microsoft.order.common.tools.system;
 
 
-import com.fang.order.common.tools.constant.StrConst;
+
+import com.microsoft.order.common.tools.constant.StrConst;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

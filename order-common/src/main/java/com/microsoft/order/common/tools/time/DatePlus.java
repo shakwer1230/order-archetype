@@ -54,18 +54,18 @@ public class DatePlus implements Serializable, Cloneable {
     //endregion
 
     public DatePlus(long time) {
-        this.localDateTime = com.fang.order.common.tools.time.ToolDatePlus.time2LocalDateTime(time);
+        this.localDateTime = ToolDatePlus.time2LocalDateTime(time);
     }
 
     public DatePlus(Date date) {
-        this.localDateTime = com.fang.order.common.tools.time.ToolDatePlus.date2LocalDateTime(date);
+        this.localDateTime = ToolDatePlus.date2LocalDateTime(date);
     }
 
     public DatePlus(String dateStr, String pattern) {
         try {
-            this.localDateTime = LocalDateTime.parse(dateStr, com.fang.order.common.tools.time.ToolDatePlus.pattern(pattern));
+            this.localDateTime = LocalDateTime.parse(dateStr, ToolDatePlus.pattern(pattern));
         } catch (DateTimeParseException e) {
-            LocalDate date = LocalDate.parse(dateStr, com.fang.order.common.tools.time.ToolDatePlus.pattern(pattern));
+            LocalDate date = LocalDate.parse(dateStr,ToolDatePlus.pattern(pattern));
             LocalTime time = LocalTime.MIN;
             this.localDateTime = LocalDateTime.of(date, time);
         }
@@ -291,7 +291,7 @@ public class DatePlus implements Serializable, Cloneable {
     }
 
     //region 属性的比较
-    public boolean isBefore(DatePlus datePlus, com.fang.order.common.tools.time.DateType dateType) {
+    public boolean isBefore(DatePlus datePlus, DateType dateType) {
         boolean isBefore;
         switch (dateType) {
             case YEAR:
@@ -320,7 +320,7 @@ public class DatePlus implements Serializable, Cloneable {
         //return this.localDateTime.isBefore(datePlus.getLocalDateTime());
     }
 
-    public boolean isSame(DatePlus datePlus, com.fang.order.common.tools.time.DateType dateType) {
+    public boolean isSame(DatePlus datePlus, DateType dateType) {
         boolean isSame;
         switch (dateType) {
             case YEAR:
@@ -349,7 +349,7 @@ public class DatePlus implements Serializable, Cloneable {
         //return this.localDateTime.isEqual(datePlus.getLocalDateTime());
     }
 
-    public boolean isAfter(DatePlus datePlus, com.fang.order.common.tools.time.DateType dateType) {
+    public boolean isAfter(DatePlus datePlus, DateType dateType) {
         boolean isAfter;
         switch (dateType) {
             case YEAR:
@@ -418,7 +418,7 @@ public class DatePlus implements Serializable, Cloneable {
         return this.localDateTime;
     }
 
-    public DatePlus toMinDate(com.fang.order.common.tools.time.DateType dateType) {
+    public DatePlus toMinDate(DateType dateType) {
         switch (dateType) {
             case YEAR:
                 this.localDateTime = LocalDateTime.of(getYear(), 1, 1, 0, 0, 0, 0);
@@ -444,7 +444,7 @@ public class DatePlus implements Serializable, Cloneable {
         return this;
     }
 
-    public DatePlus toMaxDate(com.fang.order.common.tools.time.DateType dateType) {
+    public DatePlus toMaxDate(DateType dateType) {
         switch (dateType) {
             case YEAR:
                 this.localDateTime = LocalDateTime.of(getYear(), 12, 31, 23, 59, 59, 999_999_999);
@@ -471,7 +471,7 @@ public class DatePlus implements Serializable, Cloneable {
     }
 
     public Date toDate() {
-        return com.fang.order.common.tools.time.ToolDatePlus.localDateTime2Date(this.localDateTime);
+        return ToolDatePlus.localDateTime2Date(this.localDateTime);
     }
 
     /**
@@ -480,7 +480,7 @@ public class DatePlus implements Serializable, Cloneable {
      * @return 天干地支名称
      */
     public String toGanZhi() {
-        return com.fang.order.common.tools.time.ToolLunar.lunarYearToGanZhi(toLunar().getLunarYear());
+        return ToolLunar.lunarYearToGanZhi(toLunar().getLunarYear());
     }
 
     /**
@@ -510,9 +510,9 @@ public class DatePlus implements Serializable, Cloneable {
      *
      * @return 阴历对象
      */
-    public com.fang.order.common.tools.time.Lunar toLunar() {
-        com.fang.order.common.tools.time.Solar solar = new com.fang.order.common.tools.time.Solar(this.getYear(), this.getMonth(), this.getDayOfMonth());
-        return com.fang.order.common.tools.time.ToolLunar.solartolunar(solar);
+    public Lunar toLunar() {
+        Solar solar = new Solar(this.getYear(), this.getMonth(), this.getDayOfMonth());
+        return ToolLunar.solartolunar(solar);
     }
 
     /**
@@ -520,19 +520,19 @@ public class DatePlus implements Serializable, Cloneable {
      *
      * @return 公历对象
      */
-    public com.fang.order.common.tools.time.Solar toSolar() {
-        com.fang.order.common.tools.time.Lunar lunar = new com.fang.order.common.tools.time.Lunar(this.getYear(), this.getMonth(), this.getDayOfMonth());
-        return com.fang.order.common.tools.time.ToolLunar.lunartosolar(lunar);
+    public Solar toSolar() {
+        Lunar lunar = new Lunar(this.getYear(), this.getMonth(), this.getDayOfMonth());
+        return ToolLunar.lunartosolar(lunar);
     }
 
-    private static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = com.fang.order.common.tools.time.ToolDatePlus.pattern("yyyy-MM-dd HH:mm:ss:SSS");
+    private static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = ToolDatePlus.pattern("yyyy-MM-dd HH:mm:ss:SSS");
 
     public String toString(DateTimeFormatter formatter) {
         return this.localDateTime.format(formatter);
     }
 
     public String toString(String pattern) {
-        return this.localDateTime.format(com.fang.order.common.tools.time.ToolDatePlus.pattern(pattern));
+        return this.localDateTime.format(ToolDatePlus.pattern(pattern));
     }
 
     @Override

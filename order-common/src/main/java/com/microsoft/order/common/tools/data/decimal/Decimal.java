@@ -1,7 +1,8 @@
 package com.microsoft.order.common.tools.data.decimal;
 
-import com.fang.order.common.tools.data.ToolClone;
-import com.fang.order.common.tools.data.text.ToolJson;
+
+import com.microsoft.order.common.tools.data.ToolClone;
+import com.microsoft.order.common.tools.data.text.ToolJson;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -224,7 +225,7 @@ public class Decimal extends Number implements Cloneable {
             this.bigDecimal = new BigDecimal(intValue());
         }
         if (scale > 13) {
-            this.bigDecimal = com.fang.order.common.tools.data.decimal.ToolDecimal.sqrt(this.bigDecimal, scale, mathContext.getRoundingMode());
+            this.bigDecimal = ToolDecimal.sqrt(this.bigDecimal, scale, mathContext.getRoundingMode());
         } else {
             double sqrt = Math.sqrt(this.bigDecimal.doubleValue());
             this.bigDecimal = new BigDecimal(sqrt, mathContext);
@@ -262,7 +263,7 @@ public class Decimal extends Number implements Cloneable {
     }
 
     public String fullStrValue(int scale, RoundingMode roundingMode) {
-        DecimalFormat decimalFormat = com.fang.order.common.tools.data.decimal.ToolDecimal.scale2Format(scale, roundingMode);
+        DecimalFormat decimalFormat = ToolDecimal.scale2Format(scale, roundingMode);
         return decimalFormat.format(this.bigDecimal);
     }
 

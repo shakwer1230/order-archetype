@@ -28,16 +28,29 @@
 
 
         <!--第三方引用-->
-        <apollo.version>0.10.2</apollo.version>
+        <apollo.version>1.0.0</apollo.version>
+        <apollo.core.version>1.0.0</apollo.core.version>
 
         <com.google.inject.guice>4.2.0</com.google.inject.guice>
         <com.google.guava>25.0-jre</com.google.guava>
         <com.google.code.gson>2.8.4</com.google.code.gson>
+        <com.google.guava>25.0-jre</com.google.guava>
         <com.google.zxing>3.3.2</com.google.zxing>
         <com.squareup.okhttp3>3.10.0</com.squareup.okhttp3>
         <mssql-jdbc.version>6.4.0.jre8</mssql-jdbc.version>
         <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
         <mybatis-plus-boot-starter.version>2.3</mybatis-plus-boot-starter.version>
+        <com.google.zxing>3.3.2</com.google.zxing>
+        <com.belerweb.pinyin4j>2.5.1</com.belerweb.pinyin4j>
+        <com.squareup.okhttp3>3.10.0</com.squareup.okhttp3>
+        <apollo.version>0.10.2</apollo.version>
+        <uk.com.robust-it>1.9.9</uk.com.robust-it>
+        <commons-codec>1.11</commons-codec>
+        <commons-net.version>3.6</commons-net.version>
+        <com.thoughtworks.xstream>1.4.10</com.thoughtworks.xstream>
+
+        <io.springfox.springfox-swagger2>2.6.1</io.springfox.springfox-swagger2>
+        <io.springfox.springfox-swagger-ui>2.6.1</io.springfox.springfox-swagger-ui>
     </properties>
 
     <parent>

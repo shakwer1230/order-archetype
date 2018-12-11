@@ -1,6 +1,7 @@
 package com.microsoft.order.common.tools.data.text.json.typeimpl;
 
-import com.fang.order.common.tools.data.text.json.exception.TypeException;
+
+import com.microsoft.order.common.tools.data.text.json.exception.TypeException;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

@@ -1,13 +1,13 @@
 package com.microsoft.order.common.tools.http;
 
-import com.fang.order.common.tools.data.text.ToolJson;
-import com.fang.order.common.tools.format.ToolFormat;
-import com.fang.order.common.tools.http.okhttp.ToolHttpBuilder;
-import com.fang.order.common.tools.http.pojo.HttpException;
-import com.fang.order.common.tools.http.pojo.HttpMethod;
-import com.fang.order.common.tools.http.pojo.HttpReceive;
-import com.fang.order.common.tools.http.pojo.HttpSend;
 import com.google.common.collect.Maps;
+import com.microsoft.order.common.tools.data.text.ToolJson;
+import com.microsoft.order.common.tools.format.ToolFormat;
+import com.microsoft.order.common.tools.http.okhttp.ToolHttpBuilder;
+import com.microsoft.order.common.tools.http.pojo.HttpException;
+import com.microsoft.order.common.tools.http.pojo.HttpMethod;
+import com.microsoft.order.common.tools.http.pojo.HttpReceive;
+import com.microsoft.order.common.tools.http.pojo.HttpSend;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

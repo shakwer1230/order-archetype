@@ -1,3 +1,9 @@
 dbconfig:
   file:
     location:  C:\opt\data\fang-order-api\config-cache
+#spring:
+#  devtools:
+#    add-properties: false #关闭devTools 功能
+#  http:
+#    log-request-details: false
+
