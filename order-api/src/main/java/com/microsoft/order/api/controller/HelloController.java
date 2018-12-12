@@ -15,10 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/welcome")
 public class HelloController {
-
     @GetMapping("/hello")
     @ResponseBody
     public String welcome(){
-        return "Welcome to Spring boot hh";
+        return "Welcome to Spring boot";
     }
 }

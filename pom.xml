@@ -15,6 +15,7 @@
         <module>order-api</module>
         <module>order-dao</module>
         <module>order-service</module>
+        <module>order_openapi</module>
     </modules>
 
 

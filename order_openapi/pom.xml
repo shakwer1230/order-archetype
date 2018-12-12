@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>order-archetype</artifactId>
+        <groupId>com.microsoft</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <!--<packaging>war</packaging>-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>order_openapi</artifactId>
+
+
+    <dependencies>
+        <!--start 把内嵌的web容器tomcat 替换为undertow -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-undertow</artifactId>-->
+            <!--<version>2.1.0.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--end 把内嵌的web容器tomcat 替换为undertow -->
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--
+          1去掉内置的tomcat 容器
+          1、如下把spring-boot-starter-tomcat 容器置为不打包
+          2、<packaging>war</packaging>
+          3、启动的Application 继承SpringBootServletInitializer 重写configure 方法
+        -->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+            <!--<scope>provided</scope> &lt;!&ndash;provided方式有一点好处是调试是可以用内置tomcat   provided（打包时排除）&ndash;&gt;-->
+        <!--</dependency>-->
+    </dependencies>
+
+</project>

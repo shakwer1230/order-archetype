@@ -1,9 +1,15 @@
 dbconfig:
   file:
     location:  C:\opt\data\fang-order-api\config-cache
+spring:
+  main:
+    banner-mode: "console" # banner輸出 off 关闭banner输出
 #spring:
 #  devtools:
 #    add-properties: false #关闭devTools 功能
 #  http:
 #    log-request-details: false
+application:
+  title: "springboot文档查询"
+  version: "2018-12-12"
 
