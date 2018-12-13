@@ -38,7 +38,8 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--
-          1去掉内置的tomcat 容器
+           使用war包部署
+           去掉内置的tomcat 容器
           1、如下把spring-boot-starter-tomcat 容器置为不打包
           2、<packaging>war</packaging>
           3、启动的Application 继承SpringBootServletInitializer 重写configure 方法

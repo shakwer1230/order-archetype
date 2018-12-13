@@ -3,6 +3,7 @@ package com.microsoft.order.api.config;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.event.*;
 import org.springframework.context.ApplicationListener;
+import org.springframework.core.Ordered;
 
 /**
  * @
@@ -38,23 +39,28 @@ import org.springframework.context.ApplicationListener;
 
 
 
-public class MyListener implements ApplicationListener<ApplicationPreparedEvent> {
-
-    @Override
-    public void onApplicationEvent(ApplicationPreparedEvent applicationPreparedEvent) {
-        SpringApplication application=applicationPreparedEvent.getSpringApplication();
-        System.out.println("##########MyListener ApplicationPreparedEvent 启动 .....##########");
-    }
-}
-
-//public class MyListener implements ApplicationListener<ApplicationReadyEvent> {
+//public class MyListener implements ApplicationListener<ApplicationPreparedEvent> {
 //
 //    @Override
-//    public void onApplicationEvent(ApplicationReadyEvent applicationPreparedEvent) {
+//    public void onApplicationEvent(ApplicationPreparedEvent applicationPreparedEvent) {
 //        SpringApplication application=applicationPreparedEvent.getSpringApplication();
-//        System.out.println("##########MyListener ApplicationReadyEvent 启动 .....##########");
+//        System.out.println("##########MyListener ApplicationPreparedEvent 启动 .....##########");
 //    }
 //}
+
+public class MyListener implements ApplicationListener<ApplicationReadyEvent> ,Ordered{
+
+    @Override
+    public void onApplicationEvent(ApplicationReadyEvent applicationPreparedEvent) {
+        SpringApplication application=applicationPreparedEvent.getSpringApplication();
+        System.out.println("##########MyListener ApplicationReadyEvent 启动 .....##########");
+    }
+
+    @Override
+    public int getOrder() {
+        return 1;
+    }
+}
 
 //public class MyListener implements ApplicationListener<ApplicationFailedEvent> {
 //
