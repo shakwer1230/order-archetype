@@ -4,6 +4,10 @@ dbconfig:
 spring:
   main:
     banner-mode: "console" # banner輸出 off 关闭banner输出
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
 #spring:
 #  devtools:
 #    add-properties: false #关闭devTools 功能
@@ -12,4 +16,16 @@ spring:
 application:
   title: "springboot文档查询"
   version: "2018-12-12"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+my:
+  secret: "${random.value}"
+  bignumber: "${random.long}"
+  intnumber: "${random.int}"
+
 

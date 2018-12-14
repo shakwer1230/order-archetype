@@ -16,6 +16,7 @@
         <module>order-dao</module>
         <module>order-service</module>
         <module>order_openapi</module>
+        <module>order-admin</module>
     </modules>
 
 
@@ -52,6 +53,7 @@
 
         <io.springfox.springfox-swagger2>2.6.1</io.springfox.springfox-swagger2>
         <io.springfox.springfox-swagger-ui>2.6.1</io.springfox.springfox-swagger-ui>
+        <spring.boot.admin>2.1.0</spring.boot.admin>
     </properties>
 
     <parent>
@@ -60,4 +62,7 @@
         <version>2.1.0.RELEASE</version>
         <relativePath/>
     </parent>
+    <profiles>
+
+    </profiles>
 </project>
