@@ -16,8 +16,11 @@ management:
   endpoint:
     health:
       show-details: always
+debug: true #显示debug日志信息
 ##日志配置 默認
 #logging:
 #  config: classpath:logback.xml
+
+
 
 

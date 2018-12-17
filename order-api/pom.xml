@@ -37,6 +37,21 @@
             <artifactId>lombok</artifactId>
             <!--<optional>true</optional>-->
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+
+        <!--引用 测试已经编写好的springboot starter  -->
+        <dependency>
+            <groupId>com.shakwer</groupId>
+            <artifactId>testStarter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
     <!--如果需要访问info接口来获取maven中的属性内容请记得添加如下内容-->

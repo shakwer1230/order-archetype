@@ -28,4 +28,9 @@ my:
   bignumber: "${random.long}"
   intnumber: "${random.int}"
 
+#配置自定义starter参数
+hello:
+  msg: HengYu Boy
+  show: true
+
 
